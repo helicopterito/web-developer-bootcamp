@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang = "es">
+	<head>
+		<meta charset = "UTF-8">
+		<title>Registro</title>
+	</head>
+	
+	<body>
+		<h1>Registro</h1>
+		
+		<form>
+			<label for = "nombre">Nombre</label>
+			<input id = "nombre" name = "nombre" type = "text" required placeholder = "Juan">
+			<label for = "apellido">Apellido</label>
+			<input id = "apellido" name = "apellido" type = "text" required placeholder = "Perez">
+			
+			<p>
+				<label for = "hombre">Hombre</label>
+				<input id = "hombre" type = "radio" name = "genero" value = "hombre">
+				<label for = "mujer">Mujer</label>
+				<input id = "mujer" type = "radio" name = "genero" value = "mujer">
+				<label for = "otro">Otro</label>
+				<input id = "otro" type = "radio" name = "genero" value = "otro">
+			</p>
+			
+			<p>
+				<label for = "correo">Correo</label>
+				<input id = "correo" name = "correo" type = "email" required placeholder = "correo@correo.com">
+				<label for = "contrasenia">Contraseña</label>
+				<!--<input id = "contrasenia" name = "contrasenia" type = "password" required minlength = "5" maxlength = "15"> -->
+				<input id = "contrasenia" name = "contrasenia" type = "password" required pattern = ".{5,10}" title = "La contraseña debe contener de 5 a 10 caracteres.">
+			</p>
+			
+			<p>
+				Fecha de nacimiento
+				<select name = "dia">
+					<option label = "Día"></option>
+					<option>1</option>
+					<option>2</option>
+					<option>11</option>
+				</select>
+				<select name = "mes">
+					<option label = "Mes"></option>
+					<option>Enero</option>
+					<option>Febrero</option>
+					<option>Agosto</option>
+				</select>
+				<select name = "anio">
+					<option label = "Año"></option>
+					<option>0000</option>
+					<option>1000</option>
+					<option>1994</option>
+				</select>
+			</p>
+			
+			<p>
+				<label for = "acuerdo">Estoy de Acuerdo con los Términos y Condiciones</label>
+				<input id = "acuerdo" name = "acuerdo" type = "checkbox" required>
+			</p>
+			<button>
+				Registrar
+			</button>
+		</form>
+	</body>
+</html>
