@@ -1,0 +1,11 @@
+h1{ color: #FF0000; border-color: purple; border-width: 2px; border-style: solid}
+
+/*h1{ color: #F00; border: 5px dashed purple}*/
+
+li{ color: orange; }
+
+h4{ background: #C73449; }
+
+body{ background: pink; }
+
+/*body{ background : url(/usr/share/fondo.jpg); background-repeat: no-repeat; background-size: cover;}*/

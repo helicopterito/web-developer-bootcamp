@@ -1,0 +1,9 @@
+/*element*/
+body{
+	background: orange;
+}
+
+/*id*/
+#especial{background: yellow;}
+/*clase*/
+.completado{text-decoration: line-through;}
