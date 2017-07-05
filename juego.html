@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+    <head>
+        <title>Adivina un numero</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+
+        <h1>Adivina el numero entre el 0 y 1000</h1>
+        <p>Tienes 7 oportunidades para adivinar el numero correcto.</p>
+        <script>
+          var numero = Math.random() * 1001;
+          var contador = 7;
+
+          while(contador > 0){
+              var numUsuario = prompt("Introduce el numero que piensas que es el correcto: ");
+              numUsuario = Number(numUsuario);
+              if(numero === numUsuario){
+                  alert("Felicidades has ganado el juego");
+                  contador = 0;
+              }
+
+              if(numUsuario < numero){
+                  alert("Tu numero es menor que el numero correcto.")
+                  contador--;
+              }
+              if(numUsuario > numero){
+                  alert("Tu numero es mayor que el numero correcto.")
+                  contador--;
+              }
+          }
+
+          
+        </script>
+    </body>
+</html>

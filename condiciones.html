@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Condiciones en JS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+    <h1>Introduce tu edad</h1>
+    <p>Introduce tu edad para calcular tus derechos</p>
+    <script>
+        var edad = prompt("Cual es tu edad? ");
+
+        if(edad < 0){
+            alert("Regresa cuando hayas salido del utero");
+        }
+
+        if(edad === 21){
+            alert("Feliz cumpleanios estadounidense");
+        }
+
+        if((edad % Math.sqrt(edad)) === 0){
+            alert("Tu edad es un cuadrado perfecto");
+        }
+
+        if((edad % 2) !== 0){
+            alert("Tu edad es un numero impar");
+        }
+    </script>
+    </body>
+</html>
