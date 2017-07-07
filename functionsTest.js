@@ -7,6 +7,7 @@ function isEven(num){
     }
     else{
         console.log(num + " no es un numero");
+        return false;
     }
 }
 
@@ -20,6 +21,7 @@ function factorial(num){
      }
      else{
          console.log(num + " no es un numero");
+         return NaN;
      }
     
 }
@@ -30,5 +32,6 @@ function kebabToSnake(cadena){
     }
     else{
          console.log(num + " no es una cadena");
+         return "";
     }
 }
