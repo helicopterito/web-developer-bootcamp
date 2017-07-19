@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+    <head>
+        <title>Marcador</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+        .winner{
+            color: green;
+        }
+        </style>
+    </head>
+    <body>
+        <h1><span id = "marcadorJ1">0</span> a <span id = "marcadorJ2">0</span></h1>
+        
+        <p>Jugando a: <span id = "MAX">0</span></p>
+
+        <input type="number" id = "puntuacionMaxima" placeholder="0">
+        <button id = "boton1">Jugador 1</button>
+        <button id = "boton2">Jugador 2</button>
+        <button id = "botonReset">Reset</button>
+        <script>
+            //botones del html que controlan el marcador y reset
+            var botonJugador1 = document.querySelector("#boton1");
+            var botonJugador2 = document.querySelector("#boton2");
+            var botonReset = document.querySelector("#botonReset");
+            var entradaMarcadorMax = document.querySelector("input");
+
+            //texto de la puntuacion de los jugadores
+            var textoJ1 = document.querySelector("#marcadorJ1");
+            var textoJ2 = document.querySelector("#marcadorJ2");
+            var textoMax = document.querySelector("#MAX");
+
+            //puntuacion de los jugadores
+            var marcadorJugador1 = 0;
+            var marcadorJugador2 = 0;
+
+            //puntuacion maxima
+            var MAX;
+
+            var finDeJuego = false;
+
+            function resetear(){
+                marcadorJugador1 = 0;
+                marcadorJugador2 = 0;
+                textoJ1.textContent = marcadorJugador1;   
+                textoJ2.textContent = marcadorJugador2;
+                textoJ1.classList.remove("winner");
+                textoJ2.classList.remove("winner");
+                finDeJuego = false;
+            }
+
+            function jugador1Anota(){
+                if(!finDeJuego){
+                    marcadorJugador1++;
+                    if(marcadorJugador1 === MAX){
+                        textoJ1.classList.toggle("winner");
+                        finDeJuego = true;
+                    }
+                       textoJ1.textContent = marcadorJugador1;    
+                }
+            }
+
+            function jugador2Anota(){
+                if(!finDeJuego){
+                    marcadorJugador2++;
+                    if(marcadorJugador2 === MAX){
+                        textoJ2.classList.toggle("winner");
+                        finDeJuego = true;
+                    }
+                       textoJ2.textContent = marcadorJugador2;    
+                }
+            }
+
+            function puntuacionMax(){
+                textoMax.textContent = entradaMarcadorMax.value;
+                MAX = Number(entradaMarcadorMax.value);
+            }
+
+            botonJugador1.addEventListener("click", jugador1Anota);
+            botonJugador2.addEventListener("click", jugador2Anota);
+            botonReset.addEventListener("click", resetear);
+            entradaMarcadorMax.addEventListener("change", puntuacionMax);
+        </script>
+    </body>
+</html>
